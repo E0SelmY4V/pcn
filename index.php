@@ -103,7 +103,7 @@ $ch = curl_init($url);
 // 传递数据
 if ($_POST) {
 	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['11'=>123]));
+	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($_POST));
 	// debug($_POST);
 }
 
